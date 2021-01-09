@@ -1,7 +1,5 @@
-import { token } from '../../token';
-
-export const getUserData = (username) => {
-  return fetch(`https://api.github.com/users/${username}?access_token=${token}`)
+export const getUserData = (url) => {
+  return fetch(url)
     .then((res) => checkResponse(res))
     .catch((err) => {
       throw new Error(`fetch getUser faild ${err}`);
