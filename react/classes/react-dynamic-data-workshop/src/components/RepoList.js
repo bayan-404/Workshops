@@ -12,37 +12,19 @@ class RepoList extends Component {
     );
   }
   render() {
-    // const {
-    //   description,
-    //   full_name,
-    //   language,
-    //   clone_url,
-    // } = this.state.repositories;
-
+    const repos = this.state.repositories;
     return !this.state.repositories ? (
-      <h1>Loading ..</h1>
+      <h1>Loading ...</h1>
     ) : (
-      <ul>
-        {this.state.repositories.map((repo) => {
-          {
-            console.log(
-              'reposList',
-              repo.full_name,
-              repo.clone_url,
-              repo.description ? repo.description : 'no description',
-              repo.language
-            );
-          }
-
-          <li className='repoBox' key={repo.id}>
-            <a src={repo.clone_url}>
-              <h1>{repo.full_name}</h1>
-            </a>
-            <p>{repo.description ? repo.description : 'no description'}</p>
-            <h3>{repo.language}</h3>
-          </li>;
-        })}
-      </ul>
+      repos.map((repo) => (
+        <li key={repo.id} className='repoBox'>
+          <a src={repo.clone_url}>
+            <h3>{repo.full_name}</h3>
+          </a>
+          <p>{repo.description ? repo.description : 'no description'}</p>
+          <p>{repo.language ? repo.language : 'Javascript'}</p>
+        </li>
+      ))
     );
   }
 }
