@@ -16,15 +16,17 @@ class RepoList extends Component {
     return !this.state.repositories ? (
       <h1>Loading ...</h1>
     ) : (
-      repos.map((repo) => (
-        <li key={repo.id} className='repoBox'>
-          <a src={repo.clone_url}>
-            <h3>{repo.full_name}</h3>
-          </a>
-          <p>{repo.description ? repo.description : 'no description'}</p>
-          <p>{repo.language ? repo.language : 'Javascript'}</p>
-        </li>
-      ))
+      <ul className='repoContainer'>
+        {repos.map((repo) => (
+          <li key={repo.id} className='repoBox'>
+            <a src={repo.clone_url}>
+              <h3>{repo.full_name}</h3>
+            </a>
+            <p>{repo.description ? repo.description : 'no description'}</p>
+            <p>{repo.language ? repo.language : 'Javascript'}</p>
+          </li>
+        ))}
+      </ul>
     );
   }
 }

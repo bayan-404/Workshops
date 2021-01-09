@@ -7,9 +7,7 @@ export default class App extends React.Component {
     return (
       <div className='bigcard'>
         <UserHeader />
-        <ul className='repoContainer'>
-          <RepoList />
-        </ul>
+        <RepoList />
       </div>
     );
   }
