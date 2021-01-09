@@ -1,5 +1,7 @@
 * {
   text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .bigcard {
@@ -49,7 +51,6 @@ img {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin-top: 0px;
   flex-wrap: wrap;
   height: 1000px;
 }
