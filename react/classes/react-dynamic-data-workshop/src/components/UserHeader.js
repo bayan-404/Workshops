@@ -18,7 +18,7 @@ export default class UserHeader extends Component {
       <h1>loading ..</h1>
     ) : (
       <section className='header'>
-        <img src={avatar_url} />
+        <img src={avatar_url} alt='avatar' />
         <span className='info'>
           <p>{login}</p>
           <p>followers : {followers}</p>
