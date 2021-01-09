@@ -12,12 +12,12 @@ class RepoList extends Component {
     );
   }
   render() {
-    const repos = this.state.repositories;
+    const { repositories } = this.state;
     return !this.state.repositories ? (
       <h1>Loading ...</h1>
     ) : (
       <ul className='repoContainer'>
-        {repos.map((repo) => (
+        {repositories.map((repo) => (
           <li key={repo.id} className='repoBox'>
             <a src={repo.clone_url}>
               <h3>{repo.full_name}</h3>
