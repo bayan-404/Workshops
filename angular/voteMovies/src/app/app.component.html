@@ -1,0 +1,31 @@
+<div>
+  <H1>Vote for your favorite moveie 🎥 </H1>
+  <hr />
+
+  <dl class="row">
+    <div class="posterBox">
+      <img [src]="posters.yourName" alt="movie poster" class="poster" />
+      <button class="vote" [disabled]="chosen" (click)="onVote(1)">vote</button>
+      <h2 [hidden]="!isChosen(1)">chosen!</h2>
+    </div>
+    <div class="posterBox">
+      <img [src]="posters.split" alt="movie poster" class="poster" />
+      <button class="vote" [disabled]="chosen" (click)="onVote(2)">vote</button>
+      <h2 [hidden]="!isChosen(2)">chosen!</h2>
+    </div>
+    <div class="posterBox">
+      <img [src]="posters.WolfCheldrin" alt="movie poster" class="poster" />
+      <button class="vote" [disabled]="chosen" (click)="onVote(3)">vote</button>
+      <h2 [hidden]="!isChosen(3)">chosen!</h2>
+    </div>
+    <div class="posterBox">
+      <img
+        [src]="posters.theInvisibleGuest"
+        alt="movie poster"
+        class="poster"
+      />
+      <button class="vote" [disabled]="chosen" (click)="onVote(4)">vote</button>
+      <h2 [hidden]="!isChosen(4)">chosen!</h2>
+    </div>
+  </dl>
+</div>
